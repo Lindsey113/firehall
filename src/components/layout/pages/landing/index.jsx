@@ -1,11 +1,11 @@
 export const LandingPage = () => {
-    return (
+  return (
     <div>
-        <section>
-          <h1>Testing testing</h1>  
-        </section>
-        
+      <section>
+        <h1>Testing testing</h1>
+      </section>
+
     </div>
-)
+  )
 }
 

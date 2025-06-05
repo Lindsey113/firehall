@@ -34,13 +34,14 @@
 }
 
 .nav-btn {
-  @apply font-bold text-[#17202a] hover:text-[#f39c12] ;
+  @apply font-mono text-[#ffffff] hover:text-[#FF8922];
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

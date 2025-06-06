@@ -37,6 +37,10 @@
   @apply font-mono text-[#ffffff] hover:text-[#FF8922];
 }
 
+.logging-btn {
+  @apply font-bold font-mono text-[#1f1d1d] bg-[#ff8922] hover:text-[#1f1d1d] hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -1,5 +1,6 @@
 import firelogo from '../../assets/firelogo.svg'
 import { NavLink } from 'react-router-dom'
+import { LoginButton } from '../../../auth/LoginButton'
 
 export default function Header() {
   return (
@@ -29,10 +30,7 @@ export default function Header() {
         <NavLink to='/' className='nav-btn'>
           Contacts
         </NavLink>
-        <NavLink to='/' className=
-        'font-bold font-mono text-[#1f1d1d] bg-[#ff8922] hover:text-[#1f1d1d] hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl'>
-          Login
-        </NavLink>
+        <LoginButton />
       </div>
       </div>
       

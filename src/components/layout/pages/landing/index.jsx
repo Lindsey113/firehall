@@ -4,8 +4,6 @@ export const LandingPage = () => {
       <section>
         <h1>Testing testing</h1>
       </section>
-
     </div>
   )
 }
-

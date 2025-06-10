@@ -8,7 +8,7 @@ export const LoginButton = () => {
         if (isAuthenticated) {
             logout({ returnTo: window.location.main })
         } else {
-            loginWithRedirect()
+            loginWithRedirect({appState: {returnTo: '/authenticated'}})
         }
     }
 

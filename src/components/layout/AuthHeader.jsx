@@ -19,6 +19,21 @@ export default function AuthHeader() {
           </div>
         </section>
         <div className='flex items-center p-4 gap-10 truncate'>
+        <NavLink to='/' className='nav-btn'>
+            Personnel
+          </NavLink>
+          <NavLink to='/' className='nav-btn'>
+            Equipment
+          </NavLink>
+          <NavLink to='/' className='nav-btn'>
+            Attendance
+          </NavLink>
+          <NavLink to='/' className='nav-btn'>
+            Inspections
+          </NavLink>
+          <NavLink to='/' className='nav-btn'>
+            Fire demo
+          </NavLink>
           <LoginButton />
         </div>
       </div>

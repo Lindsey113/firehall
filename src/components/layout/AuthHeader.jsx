@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { LoginButton } from '../../../auth/LoginButton'
 
 export default function AuthHeader() {
-  
+
   return (
     <header>
       <div className='bg-[#1F1D1D] flex mb-auto'>
@@ -19,7 +19,7 @@ export default function AuthHeader() {
           </div>
         </section>
         <div className='flex items-center p-4 gap-10 truncate'>
-        <NavLink to='/' className='nav-btn'>
+          <NavLink to='/' className='nav-btn'>
             Personnel
           </NavLink>
           <NavLink to='/' className='nav-btn'>
@@ -37,7 +37,6 @@ export default function AuthHeader() {
           <LoginButton />
         </div>
       </div>
-
     </header>
   )
 }

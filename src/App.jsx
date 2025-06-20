@@ -4,6 +4,7 @@ import { pageWrapper } from './components/layout/PageWrapper';
 import { AuthPageWrapper } from './components/layout/AuthPageWrapper';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
+import React from 'react';
 
 
 const router = createBrowserRouter([

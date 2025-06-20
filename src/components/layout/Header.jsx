@@ -2,9 +2,10 @@ import firelogo from '../../assets/firelogo.svg'
 import { NavLink } from 'react-router-dom'
 import { LoginButton } from '../../../auth/LoginButton'
 import { useAuth0 } from '@auth0/auth0-react'
+import React from 'react';
 
 export default function Header() {
-  const { isAuthenticated } = useAuth0()
+  //const { isAuthenticated } = useAuth0()
   
   return (
     <header>

@@ -36,7 +36,6 @@ export default function Header() {
           <LoginButton />
         </div>
       </div>
-
     </header>
   )
 }

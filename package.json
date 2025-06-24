@@ -23,13 +23,20 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "startReact": "react-scripts start",
+    "testReact": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
     "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
     "resetdb": "npm run rollback && npm run migrate && npm run seed",
-    "start": "node index.js",
-    "server": "nodemon index.js"
+    "start": "node ./api/server.js",
+    "server": "nodemon .api/server.js"
   },
   "eslintConfig": {
     "extends": [

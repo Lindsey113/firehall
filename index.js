@@ -12,11 +12,9 @@
 //   })
 // }
 
-require('dotenv').config()
- const server = require('./api/server')
+// const server = require('./api/server.js');
 
- const PORT = process.env.PORT
-
- server.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
- })
+// const PORT = process.env.PORT || 8000;
+// server.listen(PORT, () => {
+//   console.log(`\n=== Server listening on port ${PORT} ===\n`);
+// });

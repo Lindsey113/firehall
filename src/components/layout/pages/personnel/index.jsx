@@ -1,9 +1,9 @@
 import React from "react"
-export const LandingPage = () => {
+export const PersonnelLandingPage = () => {
   return (
     <div>
       <section>
-        <h1>Testing testing</h1>
+        <h1>Personnel Page</h1>
       </section>
     </div>
   )

@@ -1,5 +1,6 @@
 import './App.css';
 import { LandingPage } from './components/layout/pages/landing';
+import { PersonnelLandingPage } from './components/layout/pages/personnel';
 import { pageWrapper } from './components/layout/PageWrapper';
 import { AuthPageWrapper } from './components/layout/AuthPageWrapper';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -17,6 +18,12 @@ const router = createBrowserRouter([
     element: <AuthPageWrapper>
     <LandingPage />
   </AuthPageWrapper>
+  },
+  {
+    path: '/personnel',
+    element: <AuthPageWrapper>
+      <PersonnelLandingPage />
+    </AuthPageWrapper>
   }
 ])
 

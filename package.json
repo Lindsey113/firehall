@@ -31,12 +31,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
-    "migrate": "knex migrate:latest",
-    "rollback": "knex migrate:rollback",
+    "up": "knex migrate:up",
+    "down": "knex migrate:down",
     "seed": "knex seed:run",
-    "resetdb": "npm run rollback && npm run migrate && npm run seed",
-    "start": "node ./api/server.cjs",
-    "server": "nodemon api/server.cjs"
+    "reset": "npm run down && npm run up && npm run seed",
+    "start": "node ./api/server.js",
+    "server": "nodemon api/server.js"
   },
   "eslintConfig": {
     "extends": [

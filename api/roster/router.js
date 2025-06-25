@@ -5,6 +5,7 @@ router.get('/', (req, res, next) => {
     Roster.getAllRosters()
         .then(rost => {
             res.status(200).json(rost)
+            console.log(rost)
         })
         .catch(err => {
             next(err)

@@ -2,9 +2,12 @@ const express = require('express')
 const server = express()
 const sqlite3 = require('sqlite3')
 const sqlite = require('sqlite')
+const rosterRouter = require('./roster/router')
 require('dotenv').config()
 
-server.use(express.static('public'))
+server.use(express.json())
+server.use('/api/personnel_roster', rosterRouter)
+
 
 async function getDBConnection() {
   const db = await sqlite.open({

@@ -2,7 +2,7 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.up = async function(knex) {
+exports.up = async function (knex) {
     await knex.schema.createTable('personnel_roster', table => {
         table.increments('personnel_id')
         table.string('first_name', 50).notNullable()
@@ -27,24 +27,26 @@ exports.up = async function(knex) {
         table.text('notes', 1000)
         table.boolean('active')
     })
-    .createTable('personnel_records', table => {
-        table.increments('record_id')
-        table.string('record').notNullable()
-        table.string('category').notNullable().unique()
-        table.text('description', 1000)
-        table.integer('related_personnel')
-            .unsigned()
-            .references('personnel_id')
-            .inTable('personnel_roster')
-    })
-  
+        .createTable('personnel_records', table => {
+            table.increments('record_id')
+            table.string('record').notNullable()
+            table.string('category').notNullable().unique()
+            table.text('description', 1000)
+            table.integer('related_personnel')
+                .unsigned()
+                .references('personnel_id')
+                .inTable('personnel_roster')
+        })
+
 };
 
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.down = async function(knex) {
-  await knex.schema.dropTableIfExists('personnel_roster')
-  await knex.schema.dropTableIfExists('personnel_records')
+
+exports.down = async function (knex) {
+    await knex.schema
+        .dropTableIfExists('personnel_roster')
+        .dropTableIfExists('personnel_records')
 };

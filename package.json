@@ -35,8 +35,8 @@
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
     "resetdb": "npm run rollback && npm run migrate && npm run seed",
-    "start": "node ./api/server.js",
-    "server": "nodemon .api/server.js"
+    "start": "node ./api/server.cjs",
+    "server": "nodemon api/server.cjs"
   },
   "eslintConfig": {
     "extends": [

@@ -9,28 +9,13 @@ server.use(express.json())
 server.use('/api/personnel_roster', rosterRouter)
 
 
-async function getDBConnection() {
+async function getDBConnection() { // eslint-disable-line
   const db = await sqlite.open({
     filename: 'firehall.db3',
     driver: sqlite3.Database
   })
   return db
 }
-
-
-
-
-// server.get('/api/personnel_roster', async function(req, res){
-//     try {
-//         let db = await getDBConnection()
-//         let personnel = await db.all('SELECT * from personnel_roster')
-//         await db.close()
-//         console.log(res.json(personnel))
-//       } catch (error) {
-//         console.error(error)
-//         res.status(500).json({ error: 'Database error' })
-//       }
-// })
 
 
 const PORT = process.env.PORT || 8000

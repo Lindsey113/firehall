@@ -27,9 +27,9 @@ exports.up = async function (knex) {
         table.text('notes', 1000)
         table.boolean('active')
         table.integer('related_inventory')
-                .unsigned()
-                .references('inv_eq_id')
-                .inTable('inventory_equipment')
+            .unsigned()
+            .references('inv_eq_id')
+            .inTable('inventory_equipment')
     })
         .createTable('personnel_records', table => {
             table.increments('record_id')
@@ -72,9 +72,9 @@ exports.up = async function (knex) {
             table.string('location')
             table.integer('purchace_price')
             table.integer('assigned_to')
-                 .unsigned()
-                 .references('personnel_id')
-                 .inTable('perspnnel_roster')
+                .unsigned()
+                .references('personnel_id')
+                .inTable('personnel_roster')
         })
 
 };

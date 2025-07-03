@@ -2,6 +2,7 @@
   "name": "firehall",
   "version": "0.1.0",
   "private": true,
+  
   "dependencies": {
     "@auth0/auth0-react": "^2.3.0",
     "@tailwindcss/vite": "^4.1.8",

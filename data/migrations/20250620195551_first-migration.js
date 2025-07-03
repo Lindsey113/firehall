@@ -28,8 +28,8 @@ exports.up = async function (knex) {
         table.boolean('active')
         table.integer('related_inventory')
                 .unsigned()
-                .references('inv_id')
-                .inTable('inventory')
+                .references('inv_eq_id')
+                .inTable('inventory_equipment')
     })
         .createTable('personnel_records', table => {
             table.increments('record_id')
@@ -42,15 +42,39 @@ exports.up = async function (knex) {
                 .inTable('personnel_roster')
             table.integer('related_inventory')
                 .unsigned()
-                .references('inv_id')
-                .inTable('inventory')
+                .references('inv_eq_id')
+                .inTable('inventory_equipment')
         })
-        .createTable('inventory', table => {
-            table.increments('inv_id')
+        .createTable('inventory_equipment', table => {
+            table.increments('inv_eq_id')
             table.string('asset').notNullable()
             table.string('category').notNullable()
             table.string('task')
             table.date('last_completed')
+        })
+        .createTable('inventory_group_recordings', table => {
+            table.increments('recording_id')
+            table.string('name')
+            table.string('category')
+            table.string('KMs')
+            table.integer('hours')
+            table.integer('count')
+            table.string('new_reading')
+            table.date('day_task_completed')
+        })
+        .createTable('inventory_report_inv', table => {
+            table.string('name')
+            table.string('category')
+            table.integer('serial_num')
+            table.string('make')
+            table.string('model')
+            table.integer('year')
+            table.string('location')
+            table.integer('purchace_price')
+            table.integer('assigned_to')
+                 .unsigned()
+                 .references('personnel_id')
+                 .inTable('perspnnel_roster')
         })
 
 };
@@ -64,4 +88,7 @@ exports.down = async function (knex) {
     await knex.schema
         .dropTableIfExists('personnel_roster')
         .dropTableIfExists('personnel_records')
+        .dropTableIfExists('inventory_equipment')
+        .dropTableIfExists('inventory_group_recordings')
+        .dropTableIfExists('inventory_report_inv')
 };

@@ -6,7 +6,7 @@ export const LoginButton = () => {
 
     const handleLogging = () => {
         if (isAuthenticated) {
-            logout({ returnTo: window.location.main })
+            logout({ returnTo: window.location.main }) //eslint-disable-line
         } else {
             loginWithRedirect({appState: {returnTo: '/authenticated'}})
         }

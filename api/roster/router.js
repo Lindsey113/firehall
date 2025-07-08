@@ -26,6 +26,15 @@ router.post('/', async (req, res, next) => {
     }
 })
 
+router.delete('/:id', async (req, res, next) => {
+    try {
+        const deleted = await Roster.deletePersonById(req.params.id)
+        res.json(deleted)
+    } catch (err) {
+        next(err)
+    }
+})
+
 router.use((err, req, res, next) => { //eslint-disable-line
     res.status(500).json({
         customMessage: "Something went wrong in the Roster router",

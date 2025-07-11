@@ -26,6 +26,22 @@ router.post('/', async (req, res, next) => {
     }
 })
 
+router.put('/:personnel_id', async (req, res, next) => {
+    const changes = req.body
+    const {personnel_id} = req.params
+    Roster.update(personnel_id, changes)
+        .then(updatePerson => {
+            if(updatePerson) {
+                res.status(200).json(updatePerson)
+            } else {
+                res.status(404).json({
+                    message: "Person not found"
+                })
+            }
+        })
+        .catch(next)
+})
+
 router.delete('/:id', async (req, res, next) => {
     try {
         const deleted = await Roster.deletePersonById(req.params.id)

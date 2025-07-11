@@ -20,6 +20,13 @@ async function getPersonById(id) {
     return person
 }
 
+async function update(id, changes) {
+    return db('personnel_roster')
+        .where('personnel_id', id)
+        .update(changes)
+        .then((count) => (count > 0 ? getAllRosters(id) : null))
+}   
+
 async function deletePersonById(id) {
     return db('personnel_roster').where('personnel_id', id).del()
 }
@@ -28,5 +35,6 @@ module.exports = {
     getAllRosters,
     insertNewPersonnel,
     getPersonById,
-    deletePersonById
+    deletePersonById,
+    update
 }

@@ -5,7 +5,7 @@ export const PersonnelLandingPage = () => {
       <section>
         <h1 className="flex m-10 font-bold text-xl">Add New Personnel:</h1>
         <div className="m-10">
-        <form className="flex flex-col border p-4 gap-4 items- ">
+        <form className="flex flex-col border rounded-xl p-4 gap-4 w-[500px]">
           <input className="border"
           placeholder="First name"
           ></input>
@@ -59,7 +59,7 @@ export const PersonnelLandingPage = () => {
           ></input>
         </form>
         </div>
-        <div className="flex gap-5 m-10 flex-col">
+        <div className="flex gap-5 m-10">
           <button className="logging-btn">Add</button>
           <button className="logging-btn">Select Existing Personnel</button>
         </div>

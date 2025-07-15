@@ -6,71 +6,87 @@ export const PersonnelLandingPage = () => {
         <h1 className="flex m-10 font-bold text-xl">Add New Personnel:</h1>
         <div className="m-10">
         <form className="flex flex-col border rounded-xl p-4 gap-4 w-[500px]">
-          <input 
-          maxLength={50}
+          <input
+          maxLength={50} 
           className="border"
           placeholder="First name"/>
-          <input 
+          <input
+          maxLength={50} 
           className="border"
           placeholder="Middle name"
           />
-          <input 
+          <input
+          maxLength={50} 
           className="border"
           placeholder="Last name"
           />
-          <input 
+          <input
+          maxLength={50} 
           className="border"
           placeholder="Pay class"
           />
-          <input 
+          <input
+          maxLength={255} 
           className="border"
           placeholder="Address"
           />
-          <input 
+          <input
+          maxLength={255} 
           className="border"
           placeholder="Address 2 (optional)"
           />
-          <input 
+          <input
+          maxLength={255} 
           className="border"
           placeholder="City"
           />
-          <input 
+          <input
+          maxLength={255} 
           className="border"
           placeholder="Province"
           />
-          <input 
+          <input
+          maxLength={255} 
           className="border"
           placeholder="Postal Code"
           />
-          <input 
+          <input
+          maxLength={255} 
           className="border"
           placeholder="Country"
           />
-          <input 
+          <input
+          maxLength={10}
           className="border"
           placeholder="Home phone"
           />
-          <input 
+          <input
+          maxLength={10} 
           className="border"
           placeholder="Mobile Phone"
           />
-          <input 
+          <input
+          maxLength={50} 
           className="border"
           placeholder="Mobile provider"
           />
-          <input 
+          <input
+          maxLength={10} 
           className="border"
           placeholder="Work phone"
           />
-          <input 
+          <input
+          maxLength={50} 
           className="border"
           placeholder="Email"
           />
-          <input 
+          <input
+          maxLength={255} 
           className="border"
           placeholder="Related records"
           />
-          <input 
+          <input
+          maxLength={500} 
           className="border"
           placeholder="Notes"
           />

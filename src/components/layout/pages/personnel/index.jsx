@@ -97,11 +97,28 @@ export const PersonnelLandingPage = () => {
               </div>
               <div className="flex gap-5 m-10">
                 <button className="logging-btn">Add</button>
-                <button className="logging-btn">Select Existing Personnel</button>
+                <button className="logging-btn">Edit Existing Personnel</button>
               </div>
             </div>
             <div>
               <h1 className="flex m-10 font-bold text-xl">Search Personnel:</h1>
+              <div className="m-10">
+                <form className="flex flex-col border rounded-xl p-4 gap-4 w-[450px]"> 
+                 
+                   <input
+                    maxLength={50}
+                    className="border"
+                    placeholder="First name" />
+                  <input
+                    maxLength={50}
+                    className="border"
+                    placeholder="Last name"
+                  /> 
+                 
+                  
+                  <button className="logging-btn">Search</button>
+                </form>
+              </div>
             </div>
             
           </div>

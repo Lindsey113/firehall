@@ -6,7 +6,7 @@ export const PersonnelLandingPage = () => {
         <div className="flex-col">
           <div className='flex justify-center m-14 gap-20'>
             <div className="flex-col">
-              <h1 className="flex m-10 font-bold text-xl">Add New Personnel:</h1>
+              <h1 className="flex m-10 font-bold font-mono text-xl">Add New Personnel:</h1>
               <div className="m-10">
                 <form className="flex flex-col border rounded-xl p-4 gap-4 w-[500px]">
                   <input
@@ -101,7 +101,7 @@ export const PersonnelLandingPage = () => {
               </div>
             </div>
             <div>
-              <h1 className="flex m-10 font-bold text-xl">Search Personnel:</h1>
+              <h1 className="flex m-10 font-bold font-mono text-xl">Search Personnel:</h1>
               <div className="m-10">
                 <form className="flex flex-col border rounded-xl p-4 gap-4 w-[450px]"> 
                  

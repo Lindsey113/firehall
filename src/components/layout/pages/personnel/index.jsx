@@ -93,6 +93,13 @@ export const PersonnelLandingPage = () => {
                     className="border"
                     placeholder="Notes"
                   />
+                  <label className=""> Active Personnel
+                    <input
+                    name="Active"
+                    type="checkbox"
+                     />
+                  </label>
+                  
                 </form>
               </div>
               <div className="flex gap-5 m-10">
@@ -103,9 +110,9 @@ export const PersonnelLandingPage = () => {
             <div>
               <h1 className="flex m-10 font-bold font-mono text-xl">Search Personnel:</h1>
               <div className="m-10">
-                <form className="flex flex-col border rounded-xl p-4 gap-4 w-[450px]"> 
-                 
-                   <input
+                <form className="flex flex-col border rounded-xl p-4 gap-4 w-[450px]">
+
+                  <input
                     maxLength={50}
                     className="border"
                     placeholder="First name" />
@@ -113,14 +120,14 @@ export const PersonnelLandingPage = () => {
                     maxLength={50}
                     className="border"
                     placeholder="Last name"
-                  /> 
-                 
-                  
+                  />
+
+
                   <button className="logging-btn">Search</button>
                 </form>
               </div>
             </div>
-            
+
           </div>
         </div>
       </section>

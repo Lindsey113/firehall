@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
-//import { useNavigate, BrowserRouter } from 'react-router-dom';
 
 const AUTH_DOMAIN = import.meta.env.VITE_AUTH0_DOMAIN;
 const AUTH_CLIENT_ID = import.meta.env.VITE_AUTH0_CLIENT_ID

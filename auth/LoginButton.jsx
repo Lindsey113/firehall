@@ -15,7 +15,7 @@ export const LoginButton = () => {
     const buttonText = isAuthenticated ? 'Logout' : 'Login'
 
     return (
-        <button className='logging-btn' onClick={handleLogging}>
+        <button className='font-bold font-mono text-[#1f1d1d] bg-[#ff8922] hover:text-[#1f1d1d] hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl' onClick={handleLogging}>
             {buttonText}
         </button>
     )

@@ -96,8 +96,8 @@ export const PersonnelLandingPage = () => {
                 </form>
               </div>
               <div className="flex gap-5 m-10">
-                <button className="logging-btn">Add</button>
-                <button className="logging-btn">Edit Existing Personnel</button>
+                <button className="logging-btn">Save & Continue</button>
+                <button className="font-bold underline hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl">Clear form</button>
               </div>
             </div>
             <div>

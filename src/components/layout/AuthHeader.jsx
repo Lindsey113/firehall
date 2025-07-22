@@ -32,9 +32,6 @@ export default function AuthHeader() {
           <NavLink to='/' className='nav-btn'>
             Inspections
           </NavLink>
-          <NavLink to='/' className='nav-btn'>
-            Fire demo
-          </NavLink>
           <LoginButton />
         </div>
       </div>

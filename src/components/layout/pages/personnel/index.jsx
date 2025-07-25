@@ -12,86 +12,89 @@ export const PersonnelLandingPage = () => {
                   <input
                     maxLength={50}
                     className="border"
-                    placeholder="First name" />
+                    placeholder=" First name" />
                   <input
                     maxLength={50}
                     className="border"
-                    placeholder="Middle name"
-                  />
-                  <input
-                    maxLength={50}
-                    className="border"
-                    placeholder="Last name"
+                    placeholder=" Middle name"
                   />
                   <input
                     maxLength={50}
                     className="border"
-                    placeholder="Pay class"
+                    placeholder=" Last name"
+                  />
+                  <input
+                    maxLength={50}
+                    className="border"
+                    placeholder=" Pay class"
                   />
                   <input
                     maxLength={255}
                     className="border"
-                    placeholder="Address"
+                    placeholder=" Address"
                   />
                   <input
                     maxLength={255}
                     className="border"
-                    placeholder="Address 2 (optional)"
+                    placeholder=" Address 2 (optional)"
                   />
                   <input
                     maxLength={255}
                     className="border"
-                    placeholder="City"
+                    placeholder=" City"
                   />
                   <input
                     maxLength={255}
                     className="border"
-                    placeholder="Province"
+                    placeholder=" Province"
                   />
                   <input
                     maxLength={255}
                     className="border"
-                    placeholder="Postal Code"
+                    placeholder=" Postal Code"
                   />
                   <input
                     maxLength={255}
                     className="border"
-                    placeholder="Country"
+                    placeholder=" Country"
                   />
                   <input
                     maxLength={10}
                     className="border"
-                    placeholder="Home phone"
+                    placeholder=" Home phone"
                   />
                   <input
                     maxLength={10}
                     className="border"
-                    placeholder="Mobile Phone"
+                    placeholder=" Mobile Phone"
                   />
-                  <input
-                    maxLength={50}
-                    className="border"
-                    placeholder="Mobile provider"
-                  />
+                  <select className="border" placeholder=" Mobile provider">
+                    <option>----Mobile Provider----</option>
+                    <option>Telus</option>
+                    <option>Koodo</option>
+                    <option>Shaw</option>
+                    <option>Rogers</option>
+                    <option>Other</option>
+                  </select>
                   <input
                     maxLength={10}
                     className="border"
-                    placeholder="Work phone"
+                    placeholder=" Work phone"
                   />
                   <input
                     maxLength={50}
                     className="border"
-                    placeholder="Email"
+                    placeholder=" Email"
                   />
                   <input
                     maxLength={255}
                     className="border"
-                    placeholder="Related records"
+                    placeholder=" Related records"
                   />
                   <input
                     maxLength={500}
                     className="border"
-                    placeholder="Notes"
+                    placeholder=" Notes"
                   />
                   <label className=""> Active Personnel
                     <input

@@ -6,6 +6,7 @@ import { AuthPageWrapper } from './components/layout/AuthPageWrapper';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
+import { ProtectedRoute } from './components/layout/ProtectedRoute';
 
 
 const router = createBrowserRouter([
@@ -15,15 +16,22 @@ const router = createBrowserRouter([
   },
   {
     path: '/authenticated',
-    element: <AuthPageWrapper>
-    <LandingPage />
-  </AuthPageWrapper>
+    element:
+      <ProtectedRoute>
+        <AuthPageWrapper>
+          <LandingPage />
+        </AuthPageWrapper>
+      </ProtectedRoute>
   },
   {
     path: '/personnel',
-    element: <AuthPageWrapper>
-      <PersonnelLandingPage />
-    </AuthPageWrapper>
+    element:
+      <ProtectedRoute>
+        <AuthPageWrapper>
+          <PersonnelLandingPage />
+        </AuthPageWrapper>
+      </ProtectedRoute>
+
   }
 ])
 

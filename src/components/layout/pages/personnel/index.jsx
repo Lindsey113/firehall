@@ -1,7 +1,7 @@
 import React from "react"
 export const PersonnelLandingPage = () => {
   return (
-    <div className="flex flex-col mb-auto">
+    <div className="flex flex-col mb-auto min-h-svh">
       <section className="flex-col">
         <div className="flex-col">
           <div className='flex justify-center m-14 gap-20'>

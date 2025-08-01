@@ -48,7 +48,6 @@ export const LandingPage = () => {
           <button className="logging-btn">Let's get started</button>
         </div>
       </div>
-
     </div>
   )
 }

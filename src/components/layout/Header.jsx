@@ -23,7 +23,7 @@ export default function Header() {
         </section>
         <div className='flex items-center p-4 gap-10 truncate'>
           <NavLink to='/' className='nav-btn'>
-            About Us
+            Report A Bug
           </NavLink>
           <NavLink to='/' className='nav-btn'>
             Features

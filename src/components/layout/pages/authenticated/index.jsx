@@ -8,6 +8,11 @@ export const AuthPage = () => {
     if (isLoading) return <div>Loading...</div>
 
     return (
-        <h1>Welcome, {user.nickname}</h1>
+        <div className="flex justify-center">
+            <div className="p-4 font-mono text-2xl">
+               <h1>Welcome, {user.nickname}</h1> 
+            </div>
+        </div>
+        
     ) 
 }

@@ -1,9 +1,10 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import AuthHeader from '../layout/AuthHeader';
+import { AuthPage } from './pages/authenticated';
 import Footer from './Footer';
 import React from 'react';
 
-export const AuthPageWrapper = ({ children }) => {
+export const AuthPageWrapper = () => {
   const { isAuthenticated } = useAuth0();
 
   if (!isAuthenticated) {
@@ -13,7 +14,7 @@ export const AuthPageWrapper = ({ children }) => {
   return (
     <>
       <AuthHeader />
-      {children}
+      <AuthPage />
       <Footer />
     </>
   );

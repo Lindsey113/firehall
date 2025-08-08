@@ -13,7 +13,6 @@ export const AuthPageWrapper = ({ children }) => {
   return (
     <>
       <AuthHeader />
-      
       {children}
       <Footer />
     </>

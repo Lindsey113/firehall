@@ -45,7 +45,7 @@ export const LandingPage = () => {
           </div>
         </section>
         <div className="flex flex-col items-center p-4 text-xl text-center">
-          <button className="logging-btn">Let's get started</button>
+          <button className="logging-btn">Let's get started</button> 
         </div>
       </div>
     </div>

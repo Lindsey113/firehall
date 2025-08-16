@@ -8,7 +8,7 @@ export const AuthPage = () => {
     if (isLoading) return <div>Loading...</div>
 
     return (
-        <div className="flex justify-left">
+        <div className="flex justify-left ">
             <div className="p-4 font-mono text-2xl">
                <h1 className="mb-4">Welcome, {user.nickname}</h1>
                <div className="flex border">

@@ -11,9 +11,12 @@ export const AuthPage = () => {
         <div className="flex justify-left">
             <div className="p-4 font-mono text-2xl">
                <h1 className="mb-4">Welcome, {user.nickname}</h1>
-               <img src={user.picture} className=""></img>
-               <div className="flex flex-col">
-                <text className="mt-5">Records:</text>
+               <div className="flex border">
+                <img src={user.picture} className="m-3"></img>
+               </div>
+               
+               <div className="flex flex-col border p-5 gap-2">
+                <text className="">Records:</text>
                 <text>Notes:</text>
                 <text>Documents:</text>
                </div>

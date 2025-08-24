@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       <ProtectedRoute>
         <AuthPageWrapper>
           <LandingPage />
-        </AuthPageWrapper>
+        </AuthPageWrapper> 
       </ProtectedRoute>
   },
   {

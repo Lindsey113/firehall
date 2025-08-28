@@ -1,5 +1,8 @@
 import React from "react"
+import { useAuth0 } from "@auth0/auth0-react"
+
 export const LandingPage = () => {
+  const {loginWithRedirect} = useAuth0()
   return (
     <div className="min-h-svh">
       <div>
@@ -45,7 +48,7 @@ export const LandingPage = () => {
           </div>
         </section>
         <div className="flex flex-col items-center p-4 text-xl text-center">
-          <button className="logging-btn">Let's get started</button> 
+          <button onClick={loginWithRedirect} className="logging-btn">Let's get started</button> 
         </div>
       </div>
     </div>

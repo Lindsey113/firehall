@@ -11,7 +11,17 @@ import { ProtectedRoute } from './components/layout/ProtectedRoute';
 import { PersonnelPageWrapper } from './components/layout/PersonnelPageWrapper';
 
 
+
+
+function App() {
+  const { isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <div style={{ color: 'white' }}>🔄 Checking login status...</div>;
+  }
 const router = createBrowserRouter([
+
+  
   {
     path: '/',
     element: pageWrapper(<LandingPage />)
@@ -37,12 +47,6 @@ const router = createBrowserRouter([
   }
 ])
 
-function App() {
-  const { isLoading } = useAuth0();
-
-  if (isLoading) {
-    return <div style={{ color: 'white' }}>🔄 Checking login status...</div>;
-  }
 
   return <RouterProvider router={router} />;
 }

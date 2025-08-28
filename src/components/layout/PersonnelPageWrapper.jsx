@@ -5,17 +5,17 @@ import Footer from './Footer';
 import React from 'react';
 
 export const PersonnelPageWrapper = () => {
-  const { isAuthenticated } = useAuth0();
+    const { isAuthenticated } = useAuth0();
 
-  if (!isAuthenticated) {
-    return <div style={{ color: 'black' }}>⛔ Access denied. Please log in.</div>;
-  }
+    if (!isAuthenticated) {
+        return <div style={{ color: 'black' }}>⛔ Access denied. Please log in.</div>;
+    }
 
-  return (
-    <>
-      <AuthHeader />
-      <PersonnelLandingPage />
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <AuthHeader />
+            <PersonnelLandingPage />
+            <Footer />
+        </>
+    );
 };

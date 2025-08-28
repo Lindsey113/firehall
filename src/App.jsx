@@ -1,5 +1,6 @@
 import './App.css';
 import { LandingPage } from './components/layout/pages/landing';
+import { AuthPage } from './components/layout/pages/authenticated';
 import { PersonnelLandingPage } from './components/layout/pages/personnel';
 import { pageWrapper } from './components/layout/PageWrapper';
 import { AuthPageWrapper } from './components/layout/AuthPageWrapper';
@@ -7,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 import { ProtectedRoute } from './components/layout/ProtectedRoute';
+import { PersonnelPageWrapper } from './components/layout/PersonnelPageWrapper';
 
 
 const router = createBrowserRouter([
@@ -19,7 +21,7 @@ const router = createBrowserRouter([
     element:
       <ProtectedRoute>
         <AuthPageWrapper>
-          <LandingPage />
+          <AuthPage />
         </AuthPageWrapper> 
       </ProtectedRoute>
   },
@@ -27,9 +29,9 @@ const router = createBrowserRouter([
     path: '/personnel',
     element:
       <ProtectedRoute>
-        <AuthPageWrapper>
+        <PersonnelPageWrapper>
           <PersonnelLandingPage />
-        </AuthPageWrapper>
+        </PersonnelPageWrapper>
       </ProtectedRoute>
 
   }

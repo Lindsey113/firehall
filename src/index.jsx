@@ -15,7 +15,7 @@ root.render(
       domain={AUTH_DOMAIN}
       clientId={AUTH_CLIENT_ID}
       authorizationParams={{
-        redirect_uri: window.location.origin + '/authenticated',
+        redirect_uri: window.location.origin,
       }}
     >
       <App />

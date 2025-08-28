@@ -10,9 +10,6 @@ import React from 'react';
 import { ProtectedRoute } from './components/layout/ProtectedRoute';
 import { PersonnelPageWrapper } from './components/layout/PersonnelPageWrapper';
 
-
-
-
 function App() {
   const { isLoading } = useAuth0();
 
@@ -21,8 +18,6 @@ function App() {
   }
 
   const router = createBrowserRouter([
-
-
     {
       path: '/',
       element: pageWrapper(<LandingPage />)
@@ -44,7 +39,6 @@ function App() {
             <PersonnelLandingPage />
           </PersonnelPageWrapper>
         </ProtectedRoute>
-
     }
   ])
 

@@ -1,5 +1,22 @@
-import React from "react"
+import React, {useState} from "react"
 export const PersonnelLandingPage = () => {
+
+const [formData, setFormData] = useState({
+  first_name: '',
+  middle_name: '',
+  last_name: '',
+  pay_class: '',
+  address: '',
+  city: '',
+  province: '',
+  postal_code: '',
+  country: '',
+  home_phone: '',
+  mobile_phone: '',
+  email: '',
+  active: false
+})
+
   return (
     <div className="flex flex-col mb-auto min-h-svh">
       <section className="flex-col">

@@ -3,6 +3,7 @@ const server = express()
 const sqlite3 = require('sqlite3')
 const sqlite = require('sqlite')
 const rosterRouter = require('./roster/router')
+const cors = require('cors')
 require('dotenv').config()
 
 server.use(express.json())

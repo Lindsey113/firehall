@@ -4,7 +4,6 @@ import React from "react";
 
 export const ProtectedRoute = ({children}) => {
     const {isAuthenticated, isLoading} = useAuth0()
-
     if(isLoading) {
         return <div>LOADING...</div>
     }

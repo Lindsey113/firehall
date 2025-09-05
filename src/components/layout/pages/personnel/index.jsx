@@ -1,21 +1,57 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
+import axios from "axios"
+
 export const PersonnelLandingPage = () => {
 
-const [formData, setFormData] = useState({
-  first_name: '',
-  middle_name: '',
-  last_name: '',
-  pay_class: '',
-  address: '',
-  city: '',
-  province: '',
-  postal_code: '',
-  country: '',
-  home_phone: '',
-  mobile_phone: '',
-  email: '',
-  active: false
-})
+  const [formData, setFormData] = useState({
+    first_name: '',
+    middle_name: '',
+    last_name: '',
+    pay_class: '',
+    address: '',
+    city: '',
+    province: '',
+    postal_code: '',
+    country: '',
+    home_phone: '',
+    mobile_phone: '',
+    email: '',
+    active: false
+  })
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      await axios.post('http://localhost:8000/api/personnel', formData)
+      alert('Personnel Added Successfully')
+      setFormData({
+        first_name: '',
+        middle_name: '',
+        last_name: '',
+        pay_class: '',
+        address: '',
+        city: '',
+        province: '',
+        postal_code: '',
+        country: '',
+        home_phone: '',
+        mobile_phone: '',
+        email: '',
+        active: false
+      })
+    } catch (err) {
+      console.error(err)
+      alert('Error Adding Personnel')
+    }
+}
 
   return (
     <div className="flex flex-col mb-auto min-h-svh">
@@ -115,11 +151,11 @@ const [formData, setFormData] = useState({
                   />
                   <label className=""> Active Personnel
                     <input
-                    name="Active"
-                    type="checkbox"
-                     />
+                      name="Active"
+                      type="checkbox"
+                    />
                   </label>
-                  
+
                 </form>
               </div>
               <div className="flex gap-5 m-10">

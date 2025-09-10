@@ -6,13 +6,14 @@ async function getAllRosters() {
 }
 
 async function insertNewPersonnel(person) {
-    const [personnel_id] = await db('personnel_roster').insert(person)
-    const newPerson = await db('personnel_roster').where({ personnel_id }).first()
-    if (!newPerson) {
-        return null
-    }
-    newPerson.active = newPerson.active ? true : false
-    return newPerson
+    const [personnel_id] = await db("personnel_roster").insert(person);
+  const newPerson = await db("personnel_roster")
+    .where({ personnel_id })
+    .first();
+
+  if (!newPerson) return null;
+  newPerson.active = newPerson.active ? true : false;
+  return newPerson
 }
 
 async function getPersonById(id) {
@@ -21,10 +22,12 @@ async function getPersonById(id) {
 }
 
 async function update(id, changes) {
-    return db('personnel_roster')
-        .where('personnel_id', id)
-        .update(changes)
-        .then((count) => (count > 0 ? getAllRosters(id) : null))
+    await db("personnel_roster").where({id}).update(changes)
+    const updated = await db('personnel_roster')
+        .where({id})
+        .first()
+
+    return updated || null
 }   
 
 async function deletePersonById(id) {

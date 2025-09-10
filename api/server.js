@@ -6,22 +6,24 @@ const rosterRouter = require('./roster/router')
 const cors = require('cors')
 require('dotenv').config()
 
+server.use(cors())
 server.use(express.json())
 server.use('/api/personnel_roster', rosterRouter)
 
-const db = new sqlite3.Database("./firehall.db3", (err) => {
-  if (err) console.error("DB error:", err.message);
-  else console.log("✅ Connected to SQLite");
-})
+// const db = new sqlite3.Database("./firehall.db3", (err) => {
+//   if (err) console.error("DB error:", err.message);
+//   else console.log("✅ Connected to SQLite");
+// })
 
+// async function getDBConnection() { // eslint-disable-line
+//   const db = await sqlite.open({
+//     filename: 'firehall.db3',
+//     driver: sqlite3.Database
+//   })
+//   return db
+// }
 
-async function getDBConnection() { // eslint-disable-line
-  const db = await sqlite.open({
-    filename: 'firehall.db3',
-    driver: sqlite3.Database
-  })
-  return db
-}
+server.get("/ping", (req, res) => res.send("pong"))
 
 // server.post("/api/personnel_roster", (req, res) => {
 //   const {

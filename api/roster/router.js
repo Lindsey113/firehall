@@ -15,23 +15,23 @@ router.get('/', (req, res, next) => {
 router.post('/', async (req, res, next) => {
     try {
         const newPerson = await Roster.insertNewPersonnel(req.body)
-        if(!newPerson) {
+        if (!newPerson) {
             return res.status(400).json({
                 message: "All fields must be filled"
             })
         }
         res.status(201).json(newPerson)
-    } catch(err) {
+    } catch (err) {
         next(err)
     }
 })
 
 router.put('/:personnel_id', async (req, res, next) => {
     const changes = req.body
-    const {personnel_id} = req.params
+    const { personnel_id } = req.params
     Roster.update(personnel_id, changes)
         .then(updatePerson => {
-            if(updatePerson) {
+            if (updatePerson) {
                 res.status(200).json(updatePerson)
             } else {
                 res.status(404).json({

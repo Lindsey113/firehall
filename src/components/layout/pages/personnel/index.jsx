@@ -235,7 +235,6 @@ export const PersonnelLandingPage = () => {
                 </form>
               </div>
             </div>
-
           </div>
         </div>
       </section>

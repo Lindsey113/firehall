@@ -10,11 +10,6 @@ server.use(cors())
 server.use(express.json())
 server.use('/api/personnel_roster', rosterRouter)
 
-// const db = new sqlite3.Database("./firehall.db3", (err) => {
-//   if (err) console.error("DB error:", err.message);
-//   else console.log("✅ Connected to SQLite");
-// })
-
 async function getDBConnection() { // eslint-disable-line
   const db = await sqlite.open({
     filename: 'firehall.db3',

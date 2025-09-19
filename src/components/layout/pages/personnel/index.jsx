@@ -212,11 +212,12 @@ export const PersonnelLandingPage = () => {
                     />
                   </label>
                 </form>
-              </div>
-              <div className="flex gap-5 m-10">
+                <div className="flex gap-5 m-10">
                 <button onClick={handleSubmit} className="logging-btn">Save & Continue</button>
                 <button className="font-bold underline hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl">Clear form</button>
               </div>
+              </div>
+              
             </div>
             <div>
               <h1 className="flex m-10 font-bold font-mono text-xl">Search Personnel:</h1>

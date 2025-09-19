@@ -214,7 +214,7 @@ export const PersonnelLandingPage = () => {
                 </form>
               </div>
               <div className="flex gap-5 m-10">
-                <button type="submit" className="logging-btn">Save & Continue</button>
+                <button onClick={handleSubmit} className="logging-btn">Save & Continue</button>
                 <button className="font-bold underline hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl">Clear form</button>
               </div>
             </div>

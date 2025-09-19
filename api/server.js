@@ -23,7 +23,6 @@ async function getDBConnection() { // eslint-disable-line
   return db
 }
 
-
 const PORT = process.env.PORT || 8000
 
 server.listen(PORT, () => {

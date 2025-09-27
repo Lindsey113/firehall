@@ -229,7 +229,7 @@ export const PersonnelLandingPage = () => {
                   <input
                     maxLength={50}
                     className="border"
-                    placeholder="last name"
+                    placeholder="Last name"
                   />
                   <button className="logging-btn">Search</button>
                 </form>

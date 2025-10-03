@@ -1,10 +1,14 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { PersonnelLandingPage } from "../personnel"; 
 
 export const AuthPage = () => {
     const { user, isLoading } = useAuth0()
 
+
     if (isLoading) return <div>Loading...</div>
+
+    
 
     return (
         <div className="flex justify-left">
@@ -15,6 +19,7 @@ export const AuthPage = () => {
                 </div>
                 <div className="flex flex-col border p-5 gap-2">
                     <text className="">Records:</text>
+                    <text>None</text>
                     <text>Notes:</text>
                     <text>Documents:</text>
                 </div>

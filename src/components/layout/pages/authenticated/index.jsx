@@ -20,6 +20,7 @@ export const AuthPage = () => {
                     <text className="">Records:</text>
                     <text>None</text>
                     <text>Notes:</text>
+                    <text>None</text>
                     <text>Documents:</text>
                 </div>
             </div>

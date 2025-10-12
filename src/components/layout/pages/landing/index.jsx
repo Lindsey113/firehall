@@ -52,7 +52,6 @@ export const LandingPage = () => {
           <button onClick={loginWithRedirect} className="logging-btn">Let's get started</button> 
         </div>
         </section>
-        
       </div>
     </div>
   )

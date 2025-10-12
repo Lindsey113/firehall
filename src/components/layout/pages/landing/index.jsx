@@ -7,7 +7,7 @@ export const LandingPage = () => {
     <div className="min-h-svh">
       <div>
         <section className="flex flex-col items-center text-center font-mono bg-[#FFB86A]">
-          <h1 className="py-3 text-2xl">WELCOME TO FIREHALL.NET!</h1>
+          <h1 className="py-6 text-2xl ">WELCOME TO FIREHALL.NET!</h1>
           <p className="text-xl mx-4">
             We’re excited to introduce our brand-new site, designed specifically to give firehall teams a faster,
             smoother, and more reliable experience when managing day-to-day operations. From organizing personnel
@@ -23,7 +23,7 @@ export const LandingPage = () => {
           <div className="flex-col font-mono">
             <div className="flex justify-center m-14 gap-20 text-2x1">
               <div className="flex-col gap-3">
-                <h1 className="text-2xl">Simplify Hall Management with Ease</h1>
+                <h1 className="py-4 text-2xl">Simplify Hall Management with Ease</h1>
                 <p>Let our software do the heavy lifting—so you can focus on what matters most.
                   Designed specifically for firehalls, our platform helps you save time, minimize
                   liabilities, and stay organized without the stress. Whether it's submitting
@@ -34,7 +34,7 @@ export const LandingPage = () => {
                 </p>
               </div>
               <div className="flex-col font-mono">
-                <h1 className="text-2xl">Packed with Features</h1>
+                <h1 className="py-4 text-2xl">Packed with Features</h1>
                 <p>Our software is both powerful and affordable. Track certifications, training
                   sessions, and incidents all from one intuitive dashboard. Schedule maintenance
                   for equipment, store lesson plans, and even manage payroll for paid-on-call

@@ -22,8 +22,8 @@ export const LandingPage = () => {
         <section className="flex-col pt-10 bg-[#fff3e6]">
           <div className="flex-col font-mono">
             <div className="flex justify-center m-14 gap-20 text-2x1">
-              <div className="flex-col gap-3">
-                <h1 className="py-4 text-2xl">Simplify Hall Management with Ease</h1>
+              <div className="rounded-xl p-4 flex-col gap-3 bg-[#ffce99] shadow-lg">
+                <h1 className="p-2 text-2xl">Simplify Hall Management with Ease</h1>
                 <p>Let our software do the heavy lifting—so you can focus on what matters most.
                   Designed specifically for firehalls, our platform helps you save time, minimize
                   liabilities, and stay organized without the stress. Whether it's submitting
@@ -33,8 +33,8 @@ export const LandingPage = () => {
                   like having an extra admin on your team—without the extra cost.
                 </p>
               </div>
-              <div className="flex-col font-mono">
-                <h1 className="py-4 text-2xl">Packed with Features</h1>
+              <div className="rounded-xl bg-[#ffce99] p-4 flex-col font-mono shadow-lg">
+                <h1 className="p-2 text-2xl">Packed with Features</h1>
                 <p>Our software is both powerful and affordable. Track certifications, training
                   sessions, and incidents all from one intuitive dashboard. Schedule maintenance
                   for equipment, store lesson plans, and even manage payroll for paid-on-call

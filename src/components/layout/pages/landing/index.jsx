@@ -4,7 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react"
 export const LandingPage = () => {
   const {loginWithRedirect} = useAuth0()
   return (
-    <div className="min-h-svh">
+    <div className="min-h-svh bg-[#fff3e6]">
       <div>
         <section className="flex flex-col items-center text-center font-mono bg-[#FFB86A]">
           <h1 className="py-6 text-2xl ">WELCOME TO FIREHALL.NET!</h1>
@@ -19,7 +19,7 @@ export const LandingPage = () => {
             ~Considering this is a brand new site, please keep us updated on any bugs or anything you think could be improved~
           </p>
         </section>
-        <section className="flex-col pt-10">
+        <section className="flex-col pt-10 bg-[#fff3e6]">
           <div className="flex-col font-mono">
             <div className="flex justify-center m-14 gap-20 text-2x1">
               <div className="flex-col gap-3">
@@ -47,9 +47,12 @@ export const LandingPage = () => {
             </div>
           </div>
         </section>
-        <div className="flex flex-col items-center p-4 text-xl text-center">
+        <section className="">
+          <div className="flex flex-col items-center p-4 text-xl text-center">
           <button onClick={loginWithRedirect} className="logging-btn">Let's get started</button> 
         </div>
+        </section>
+        
       </div>
     </div>
   )

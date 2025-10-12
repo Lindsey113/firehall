@@ -4,9 +4,9 @@ import { useAuth0 } from "@auth0/auth0-react"
 export const LandingPage = () => {
   const {loginWithRedirect} = useAuth0()
   return (
-    <div className="min-h-svh bg-[#fff3e6]">
+    <div className="min-h-svh bg-gradient-to-b from-orange-500 to-orange-100">
       <div>
-        <section className="flex flex-col items-center text-center font-mono bg-[#FFB86A]">
+        <section className="flex flex-col items-center text-center font-mono">
           <h1 className="py-6 text-2xl ">WELCOME TO FIREHALL.NET!</h1>
           <p className="text-xl mx-4">
             We’re excited to introduce our brand-new site, designed specifically to give firehall teams a faster,
@@ -19,7 +19,7 @@ export const LandingPage = () => {
             ~Considering this is a brand new site, please keep us updated on any bugs or anything you think could be improved~
           </p>
         </section>
-        <section className="flex-col pt-10 bg-[#fff3e6]">
+        <section className="flex-col pt-10">
           <div className="flex-col font-mono">
             <div className="flex justify-center m-14 gap-20 text-2x1">
               <div className="rounded-xl p-4 flex-col gap-3 bg-[#ffce99] shadow-lg">
@@ -49,7 +49,7 @@ export const LandingPage = () => {
         </section>
         <section className="">
           <div className="flex flex-col items-center p-4 text-xl text-center">
-          <button onClick={loginWithRedirect} className="logging-btn">Let's get started</button> 
+          <button onClick={loginWithRedirect} className="logging-btn shadow-lg">Let's get started</button> 
         </div>
         </section>
       </div>

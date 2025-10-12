@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Footer() {
     return (
-        <footer className='flex flex-col justify-center px-14'>
+        <footer className='flex flex-col justify-center px-14 bg-[#fff3e6]'>
       <section className='flex justify-center pt-4 pb-8'>
         <div className='footer-address flex-col text-[#99A1AF] pt-4'>
           <p>Valon Technologies Inc©2025</p>

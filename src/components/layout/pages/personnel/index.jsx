@@ -16,12 +16,36 @@ export const PersonnelLandingPage = () => {
     country: '',
     home_phone: '',
     mobile_phone: '',
+    mobile_provider: '',
     work_phone: '',
     email: '',
     related_records: '',
     notes: '',
     active: false
   })
+
+  const clearForm = () => {
+    setFormData({
+      first_name: '',
+      middle_name: '',
+      last_name: '',
+      pay_class: '',
+      address: '',
+      address_2: '',
+      city: '',
+      province: '',
+      postal_code: '',
+      country: '',
+      home_phone: '',
+      mobile_phone: '',
+      mobile_provider: '',
+      work_phone: '',
+      email: '',
+      related_records: '',
+      notes: '',
+      active: false
+    })
+  }
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target
@@ -59,6 +83,8 @@ export const PersonnelLandingPage = () => {
       alert('Error Adding Personnel', err)
     }
   }
+
+  
 
   return (
     <div className="flex flex-col mb-auto min-h-svh">
@@ -213,11 +239,13 @@ export const PersonnelLandingPage = () => {
                     />
                   </label>
                   <div className="flex gap-5 m-10">
-                <button type="submit" className="logging-btn">Save & Continue</button>
-                <button className="font-bold underline hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl">Clear form</button>
-              </div>
+                    <button type="submit" className="logging-btn">Save & Continue</button>
+                    <button
+                      className="font-bold underline hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl"
+                      onClick={clearForm}>Clear form</button>
+                  </div>
                 </form>
-                
+
               </div>
             </div>
             <div>

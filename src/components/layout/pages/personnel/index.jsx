@@ -80,7 +80,7 @@ export const PersonnelLandingPage = () => {
       })
     } catch (err) {
       console.error(err)
-      alert('Error Adding Personnel', err)
+      alert(`Error Adding Personnel: ${err.message}`)
     }
   }
 
@@ -190,8 +190,12 @@ export const PersonnelLandingPage = () => {
                     className="border"
                     placeholder=" Mobile Phone"
                   />
-                  <select className="border" placeholder=" Mobile provider">
-                    <option>----Mobile Provider----</option>
+                  <select 
+                  name="mobile_provider"
+                  className="border" 
+                  placeholder=" Mobile provider"
+                  >
+                    <option value="">----Mobile Provider----</option>
                     <option>Telus</option>
                     <option>Koodo</option>
                     <option>Shaw</option>

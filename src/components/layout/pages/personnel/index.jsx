@@ -84,8 +84,6 @@ export const PersonnelLandingPage = () => {
     }
   }
 
-  
-
   return (
     <div className="flex flex-col mb-auto min-h-svh">
       <section className="flex-col">
@@ -190,10 +188,10 @@ export const PersonnelLandingPage = () => {
                     className="border"
                     placeholder=" Mobile Phone"
                   />
-                  <select 
-                  name="mobile_provider"
-                  className="border" 
-                  placeholder=" Mobile provider"
+                  <select
+                    name="mobile_provider"
+                    className="border"
+                    placeholder=" Mobile provider"
                   >
                     <option value="">----Mobile Provider----</option>
                     <option>Telus</option>

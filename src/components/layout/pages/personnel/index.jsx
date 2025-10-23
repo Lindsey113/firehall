@@ -16,6 +16,7 @@ export const PersonnelLandingPage = () => {
     country: '',
     home_phone: '',
     mobile_phone: '',
+    work_phone: '',
     email: '',
     related_records: '',
     notes: '',
@@ -34,7 +35,7 @@ export const PersonnelLandingPage = () => {
     e.preventDefault()
     try {
       const res = await axios.post('http://localhost:8000/api/personnel_roster', formData)
-      alert(`Personnel Added Successfully: ${res.first_name}`)
+      alert(`Personnel Added Successfully: ${res.data.first_name}`)
       setFormData({
         first_name: '',
         middle_name: '',
@@ -55,7 +56,7 @@ export const PersonnelLandingPage = () => {
       })
     } catch (err) {
       console.error(err)
-      alert('Error Adding Personnel')
+      alert('Error Adding Personnel', err)
     }
   }
 
@@ -213,7 +214,7 @@ export const PersonnelLandingPage = () => {
                   </label>
                 </form>
                 <div className="flex gap-5 m-10">
-                <button type="submit" className="logging-btn">Save & Continue</button>
+                <button type="submit" className="logging-btn" onClick={handleSubmit}>Save & Continue</button>
                 <button className="font-bold underline hover:border-[#E2F0F7] border-transparent border-1 py-3 px-4 rounded-xl">Clear form</button>
               </div>
               </div>

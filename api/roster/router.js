@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const Roster = require('./model')
 
+
 router.get('/', (req, res, next) => {
     Roster.getAllRosters()
         .then(rost => {

@@ -5,7 +5,7 @@ const sqlite = require('sqlite')
 const rosterRouter = require('./roster/router')
 const cors = require('cors')
 require('dotenv').config()
-
+server.set('strict routing', false)
 server.use(cors())
 server.use(express.json())
 server.use('/api/personnel_roster', rosterRouter)

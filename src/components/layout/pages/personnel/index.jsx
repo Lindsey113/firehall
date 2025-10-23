@@ -11,8 +11,8 @@ export const PersonnelLandingPage = () => {
     address: '',
     address_2: '',
     city: '',
-    province: '',
-    postal_code: '',
+  state_province: '',
+  zip_postal: '',
     country: '',
     home_phone: '',
     mobile_phone: '',
@@ -68,8 +68,8 @@ export const PersonnelLandingPage = () => {
         address: '',
         address_2: '',
         city: '',
-        province: '',
-        postal_code: '',
+    state_province: '',
+    zip_postal: '',
         country: '',
         home_phone: '',
         mobile_phone: '',
@@ -149,20 +149,20 @@ export const PersonnelLandingPage = () => {
                     placeholder=" City"
                   />
                   <input
-                    name="province"
-                    value={formData.province}
+                    name="state_province"
+                    value={formData.state_province}
                     onChange={handleChange}
                     maxLength={255}
                     className="border"
-                    placeholder=" Province"
+                    placeholder=" Province / State"
                   />
                   <input
-                    name="postal_code"
-                    value={formData.postal_code}
+                    name="zip_postal"
+                    value={formData.zip_postal}
                     onChange={handleChange}
                     maxLength={255}
                     className="border"
-                    placeholder=" Postal Code"
+                    placeholder=" Postal Code / ZIP"
                   />
                   <input
                     name="country"

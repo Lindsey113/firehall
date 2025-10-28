@@ -11,8 +11,8 @@ export const PersonnelLandingPage = () => {
     address: '',
     address_2: '',
     city: '',
-  state_province: '',
-  zip_postal: '',
+    state_province: '',
+    zip_postal: '',
     country: '',
     home_phone: '',
     mobile_phone: '',
@@ -68,8 +68,8 @@ export const PersonnelLandingPage = () => {
         address: '',
         address_2: '',
         city: '',
-    state_province: '',
-    zip_postal: '',
+        state_province: '',
+        zip_postal: '',
         country: '',
         home_phone: '',
         mobile_phone: '',
@@ -80,6 +80,9 @@ export const PersonnelLandingPage = () => {
       })
     } catch (err) {
       console.error(err)
+      console.error('axios err:', err);
+      console.error('err.response.data:', err.response && err.response.data);
+      console.error('err.response.status:', err.response && err.response.status);
       alert(`Error Adding Personnel: ${err.message}`)
     }
   }

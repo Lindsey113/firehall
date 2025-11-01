@@ -86,6 +86,7 @@ export const PersonnelLandingPage = () => {
       alert(`Error Adding Personnel: ${err.message}`)
     }
   }
+  
 
   return (
     <div className="flex flex-col mb-auto min-h-svh">

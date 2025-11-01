@@ -87,7 +87,6 @@ export const PersonnelLandingPage = () => {
     }
   }
   
-
   return (
     <div className="flex flex-col mb-auto min-h-svh">
       <section className="flex-col">
